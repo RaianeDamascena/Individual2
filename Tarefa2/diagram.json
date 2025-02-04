@@ -10,7 +10,13 @@
       "left": 0,
       "attrs": { "builder": "pico-sdk" }
     },
-    { "type": "wokwi-led", "id": "led1", "top": 6, "left": -159.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -22.8,
+      "left": -159.4,
+      "attrs": { "color": "red" }
+    },
     {
       "type": "wokwi-led",
       "id": "led2",
@@ -45,6 +51,13 @@
       "top": 176.75,
       "left": -96,
       "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -22.6,
+      "left": -259.2,
+      "attrs": { "color": "green" }
     }
   ],
   "connections": [
@@ -58,7 +71,9 @@
     [ "r3:2", "pico:GP13", "green", [ "v0" ] ],
     [ "led1:C", "pico:GND.2", "black", [ "v0" ] ],
     [ "led2:C", "pico:GND.2", "black", [ "v0" ] ],
-    [ "led3:C", "pico:GND.2", "black", [ "v0" ] ]
+    [ "led3:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "btn1:1.r", "pico:GND.1", "green", [ "v0" ] ],
+    [ "btn1:2.r", "pico:GP5", "green", [ "h0" ] ]
   ],
   "dependencies": {}
 }

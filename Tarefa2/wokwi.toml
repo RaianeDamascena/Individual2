@@ -1,14 +1,19 @@
 [wokwi]
-name = "Individual2"
-board = "raspberry-pi-pico"
+version = 1
+firmware = 'build/Individual2.uf2'
+elf = 'build/Individual2.elf'
 
-[build]
-toolchain = "gcc-arm-none-eabi"
-firmware = "build/Individual2.uf2"   # Caminho para o arquivo UF2 gerado
-elf = "build/Individual2.elf"         # Caminho para o arquivo ELF gerado
+# Configurações específicas para o projeto, como o tipo de placa
+[board]
+type = "raspberry-pi-pico"  # Defina o tipo de board como Raspberry Pi Pico
 
-[files]
-src = ["main.c"]
+# Configurações de dispositivos para o Wokwi (no caso, LEDs e botão)
+[devices]
+led_red = { type = "led", pin = 13 }
+led_blue = { type = "led", pin = 12 }
+led_green = { type = "led", pin = 11 }
+button = { type = "button", pin = 5 }
 
-[options]
-run = true
+# Especifique os recursos adicionais, como comunicação serial (se desejado)
+[serial]
+enabled = true
