@@ -29,6 +29,10 @@ add_executable(Individual2 main.c)
 # Define o nome do programa
 pico_set_program_name(Individual2 "Individual2")
 
+# Ativa comunicação USB na saída padrão
+pico_enable_stdio_usb(Individual2 1)
+pico_enable_stdio_uart(Individual2 0)
+
 # Linka a biblioteca padrão do SDK do Pico
 target_link_libraries(Individual2 pico_stdlib)
 
