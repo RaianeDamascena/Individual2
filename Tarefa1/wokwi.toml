@@ -1,14 +1,4 @@
 [wokwi]
-name = "Individual2"
-board = "raspberry-pi-pico"
-
-[build]
-toolchain = "gcc-arm-none-eabi"
-firmware = "build/Individual2.uf2"   # Caminho para o arquivo UF2 gerado
-elf = "build/Individual2.elf"         # Caminho para o arquivo ELF gerado
-
-[files]
-src = ["main.c"]
-
-[options]
-run = true
+version = 1
+firmware = 'build/Individual2.uf2'
+elf = 'build/Individual2.elf'
